@@ -1,7 +1,15 @@
+"use client";
+import { SidebarComponent } from "@/components/SidebarComponent";
+import { Content } from "@/components/Content";
+import { BurgerProvider } from "@/context/BurgerProvider";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <p>Hola</p>
-    </main>
+    <>
+      <BurgerProvider>
+        <SidebarComponent />
+        <Content />
+      </BurgerProvider>
+    </>
   );
 }
