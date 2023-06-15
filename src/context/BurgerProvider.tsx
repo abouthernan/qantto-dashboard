@@ -5,7 +5,7 @@ interface BurgerContextType {
   toggleBurger: () => void;
 }
 
-const BurgerContext = createContext<BurgerContextType>();
+const BurgerContext = createContext<BurgerContextType>({} as BurgerContextType);
 
 export function BurgerProvider({ children }: { children: React.ReactNode }) {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
